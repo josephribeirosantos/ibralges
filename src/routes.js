@@ -1,13 +1,15 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Icon, Feather } from '@expo/vector-icons';
-/* import { LinearGradient } from '@expo/linear-gradient'; */
 
 import HomeScreen from './pages/HomeScreen';
 import ListScreen from './pages/ListScreen';
 import NotificationsScreen from './pages/NotificationsScreen';
 import PostScreen from './pages/PostScreen';
 import SettingsScreen from './pages/SettingsScreen';
+
+import ButtonNew from './components/ButtonNew';
+
+import { Icon, Entypo, Feather } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,11 +39,10 @@ export default function Routes() {
             />
             <Tab.Screen name="Post" component={PostScreen}
                 options={{
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-/*                         <LinearGradient style={styles.iconTabRound} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#403D39', '#020E26']}>
- */                            <Feather name="edit" size={26} color={'#020E26'} />
-/*                         </LinearGradient>
- */                    )
+                        <ButtonNew size={size} color={color} />
+                    )
                 }}
             />
             <Tab.Screen name="Notifications" component={NotificationsScreen}
