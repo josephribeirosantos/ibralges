@@ -16,7 +16,7 @@ export default function Routes() {
         <Tab.Navigator>
             <Tab.Screen name="Inicio" component={Home} />
             <Tab.Screen name="ListScreen" component={ListScreen} />
-            <Tab.Screen name="Post" component={PostScreen} />
+            <Tab.Screen name="Agendamento" component={PostScreen} />
             <Tab.Screen name="NotificationsScreen" component={NotificationsScreen} />
             <Tab.Screen name="SettingsScreen" component={SettingsScreen} />
         </Tab.Navigator>
