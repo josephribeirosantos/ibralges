@@ -41,7 +41,7 @@ export default function Routes() {
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-                        <ButtonNew size={size} color={color} />
+                        < ButtonNew size={size} color={color} />
                     )
                 }}
             />
