@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function SettingsScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Setup</Text>
+            <Text style={styles.text}>Dizimo e Oferta</Text>
         </View>
     );
 }

@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function ListScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Categoria</Text>
+            <Text style={styles.text}>Devocionais e palavra Pastoral</Text>
         </View>
     );
 }

@@ -11,6 +11,8 @@ import ButtonNew from './components/ButtonNew';
 
 import { Icon, Entypo, Feather } from '@expo/vector-icons';
 
+import { View, Image, StyleSheet } from 'react-native';
+
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
@@ -20,26 +22,26 @@ export default function Routes() {
                 activeTintColor: '#020E26',
                 inactiveTintColor: '#403D39',
                 showLabel: false,
-            }}
+            }} initialRouteName="Home"
         >
-
             <Tab.Screen name="Home" component={HomeScreen}
                 options={{
+                    tabBarLabel: 'Inicio',
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="home" size={size} color={color} />
                     )
                 }}
             />
-            < Tab.Screen name="Categories" component={ListScreen}
+            <Tab.Screen name="Settings" component={SettingsScreen}
                 options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="list" size={size} color={color} />
+                    Image: ({ color, size }) => (
+                        < DisplayAnImageWithStyle size={size} color={color} />
                     )
                 }}
             />
             <Tab.Screen name="Post" component={PostScreen}
                 options={{
-                    tabBarLabel: '',
+                    tabBarLabel: 'Agendamento',
                     tabBarIcon: ({ color, size }) => (
                         < ButtonNew size={size} color={color} />
                     )
@@ -48,14 +50,15 @@ export default function Routes() {
             <Tab.Screen name="Notifications" component={NotificationsScreen}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Feather name="bell" size={size} color={color} />
+                        <Feather name="youtube" size={size} color={color} />
                     )
                 }}
             />
-            <Tab.Screen name="Settings" component={SettingsScreen}
+            < Tab.Screen name="Categories" component={ListScreen}
                 options={{
+                    tabBarLabel: 'Devocionais',
                     tabBarIcon: ({ color, size }) => (
-                        <Feather name="settings" size={size} color={color} />
+                        <Feather name="list" size={size} color={color} />
                     )
                 }}
             />

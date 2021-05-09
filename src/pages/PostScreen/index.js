@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function PostScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Post</Text>
+            <Text style={styles.text}>Faça o seu agendamento!</Text>
         </View>
     );
 }
