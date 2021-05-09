@@ -6,11 +6,9 @@ import { Icon, Entypo, Feather } from '@expo/vector-icons';
 
 export default function ButtonNew() {
     return (
-        <View>
-            <LinearGradient style={styles.iconTabRound} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#403D39', '#020E26']}>
-                <Feather name="plus" size={26} color='#FFF' />
-            </LinearGradient>
-        </View>
+        <LinearGradient style={styles.iconTabRound} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#898C8F', '#141F26']}>
+            <Feather name="plus" size={26} color='#FFF' />
+        </LinearGradient>
     );
 }
 
@@ -24,12 +22,12 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         borderRadius: 30,
-        marginBottom: 20,
+        marginBottom: 25,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         elevation: 6,
-        shadowColor: '#020E26',
+        shadowColor: '#4F9F7C',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 5,

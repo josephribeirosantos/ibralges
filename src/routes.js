@@ -1,15 +1,17 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from './pages/HomeScreen';
-import ListScreen from './pages/ListScreen';
+import Home from './pages/Home';
+import MoreScreen from './pages/MoreScreen';
 import NotificationsScreen from './pages/NotificationsScreen';
 import PostScreen from './pages/PostScreen';
-import SettingsScreen from './pages/SettingsScreen';
+import TithesOfferingsScreen from './pages/TithesOfferingsScreen';
 
 import ButtonNew from './components/ButtonNew';
 
 import { Icon, Entypo, Feather } from '@expo/vector-icons';
+
+import { View, Image, StyleSheet } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,45 +19,47 @@ export default function Routes() {
     return (
         <Tab.Navigator
             tabBarOptions={{
-                activeTintColor: '#020E26',
-                inactiveTintColor: '#403D39',
-                showLabel: false,
-            }}
+                activeTintColor: '#0D0D0D',
+                inactiveTintColor: '#898C8F',
+                borderTopColor: 'transparent',
+                showLabel: true,
+            }} initialRouteName="Home"
         >
-
-            <Tab.Screen name="Home" component={HomeScreen}
+            <Tab.Screen name="Home" component={Home}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="home" size={size} color={color} />
                     )
                 }}
             />
-            < Tab.Screen name="Categories" component={ListScreen}
+            <Tab.Screen name="Contribua" component={TithesOfferingsScreen}
+                options={{
+                    Image: ({ color, size }) => (
+                        < DisplayAnImageWithStyle size={size} color={color} />
+                    )
+                }}
+            />
+            <Tab.Screen name="Agendamento"
+                component={PostScreen}
+                options={{
+                    tabBarLabel: 'Agendamento',
+                    tabBarIcon: ({ tintColor }) => (
+                        <ButtonNew />
+                    )
+                }}
+
+            />
+            <Tab.Screen name="Pregações" component={NotificationsScreen}
+                options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <Feather name="youtube" size={size} color={color} />
+                    )
+                }}
+            />
+            < Tab.Screen name="Mais" component={MoreScreen}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="list" size={size} color={color} />
-                    )
-                }}
-            />
-            <Tab.Screen name="Post" component={PostScreen}
-                options={{
-                    tabBarLabel: '',
-                    tabBarIcon: ({ color, size }) => (
-                        < ButtonNew size={size} color={color} />
-                    )
-                }}
-            />
-            <Tab.Screen name="Notifications" component={NotificationsScreen}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="bell" size={size} color={color} />
-                    )
-                }}
-            />
-            <Tab.Screen name="Settings" component={SettingsScreen}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="settings" size={size} color={color} />
                     )
                 }}
             />

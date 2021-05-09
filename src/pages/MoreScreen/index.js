@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Home() {
+export default function MoreScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Pagina Home</Text>
+            <Text style={styles.text}>MAIS + Devocionais e palavra Pastoral</Text>
         </View>
     );
 }
