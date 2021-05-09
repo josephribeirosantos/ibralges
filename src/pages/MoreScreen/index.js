@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function SettingsScreen() {
+export default function MoreScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Dizimo e Oferta</Text>
+            <Text style={styles.text}>MAIS + Devocionais e palavra Pastoral</Text>
         </View>
     );
 }

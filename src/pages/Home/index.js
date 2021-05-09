@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ListScreen() {
+export default function Home() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Devocionais e palavra Pastoral</Text>
+            <Text style={styles.text}>Home</Text>
         </View>
     );
 }
