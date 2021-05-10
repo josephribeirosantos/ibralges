@@ -4,12 +4,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './pages/Home';
 import MoreScreen from './pages/MoreScreen';
 import NotificationsScreen from './pages/NotificationsScreen';
-import PostScreen from './pages/PostScreen';
+import AppointmentScreen from './pages/AppointmentScreen';
 import TithesOfferingsScreen from './pages/TithesOfferingsScreen';
 
 import ButtonNew from './components/ButtonNew';
 
-import { Icon, Entypo, Feather } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 import { View, Image, StyleSheet } from 'react-native';
 
@@ -28,21 +28,19 @@ export default function Routes() {
             <Tab.Screen name="Home" component={Home}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Feather name="home" size={size} color={color} />
+                        <Feather name="home" color={color} size={size} />
                     )
                 }}
             />
             <Tab.Screen name="Contribua" component={TithesOfferingsScreen}
                 options={{
-                    Image: ({ color, size }) => (
-                        < DisplayAnImageWithStyle size={size} color={color} />
+                    tabBarIcon: ({ color, size }) => (
+                        <Feather name="heart" color={color} size={size} />
                     )
                 }}
             />
-            <Tab.Screen name="Agendamento"
-                component={PostScreen}
+            <Tab.Screen name="Agendamento" component={AppointmentScreen}
                 options={{
-                    tabBarLabel: 'Agendamento',
                     tabBarIcon: ({ tintColor }) => (
                         <ButtonNew />
                     )

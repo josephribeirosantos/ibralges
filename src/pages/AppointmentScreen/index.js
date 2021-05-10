@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function PostScreen() {
+export default function AppointmentScreen() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Faça o seu agendamento!</Text>
