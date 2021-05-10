@@ -1,24 +1,15 @@
 
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
-import assets from './assets'
+import mbway from './assets/mbway.png';
 
-const styles = StyleSheet.create({
-    container: {
-        paddingTop: 50,
-    },
-    stretch: {
-        width: 50,
-        height: 200,
-        resizeMode: 'stretch',
-    },
-});
-
-const DisplayAnImageWithStyle = () => {
-    return (
-        <img src={mbway} alt='mbway'
+function Header() {
+    return <div className="header" >
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/600px-Facebook_f_logo_%282019%29.svg.png"
+            alt=""
         />
-    )
+    </div>
 }
 
-export default DisplayAnImageWithStyle;
+export default Header;
