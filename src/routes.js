@@ -11,8 +11,6 @@ import ButtonNew from './components/ButtonNew';
 
 import { Feather } from '@expo/vector-icons';
 
-import { View, Image, StyleSheet } from 'react-native';
-
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
