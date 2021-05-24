@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     video: {
         alignSelf: 'center',
         width: 320,
-        height: 'auto',
+        height: 200,
         paddingBottom: 200,
         borderColor: 'coral',
         borderStyle: 'solid',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     },
     scrollView: {
         marginHorizontal: 30,
-        marginTop: 60,
-        marginRight: 'center',
+        marginTop: 10,
+        marginRight: 30,
     },
 });
