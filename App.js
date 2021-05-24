@@ -24,11 +24,11 @@ export default class App extends React.Component {
 
   render() {
     const colorLayer = this.state.AnimationDone ? null : (
-      <View style={[StyleSheet.absoluteFill, { backgroundColor: "#0D0D0D" }]} />
+      <View style={[StyleSheet.absoluteFill, { backgroundColor: "#060606" }]} />
     );
 
     const whiteLayer = this.state.AnimationDone ? null : (
-      <View style={[StyleSheet.absoluteFill, { backgroundColor: "#FFF" }]} />
+      <View style={[StyleSheet.absoluteFill, { backgroundColor: "#F0F0F0" }]} />
     );
 
     const imageScale = {
@@ -46,7 +46,7 @@ export default class App extends React.Component {
       opacity: this.state.loadingProgress.interpolate({
         inputRange: [0, 25, 50],
         outputRange: [0, 0, 1],
-        extrapolate: "clamp"
+        extrapolate: 'clamp'
       })
     }
 
@@ -60,7 +60,7 @@ export default class App extends React.Component {
             maskElement={
               <View style={styles.centered}>
                 <Animated.Image
-                  source={require('./assets/images/novo_logo_do_twitter-removebg-preview.png')}
+                  source={require('./assets/images/logo-icon.png')}
                   style={[{ width: 1000 }, imageScale]}
                   resizeMode="contain"
                 />
