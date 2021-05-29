@@ -16,6 +16,35 @@ const Tab = createBottomTabNavigator();
 export default function Routes() {
     return (
         <Tab.Navigator
+            screenOptions={({ route }) => ({
+                tabBarIcon: ({ color, size }) => {
+                    let iconName;
+
+                    switch (route.name) {
+                        case 'Home':
+                            iconName = 'home';
+                            break;
+                        case 'Contribua':
+                            iconName = 'heart';
+                            break;
+                        case 'Agendamento':
+                            iconName = 'plus';
+                            break;
+                        case 'Pregações':
+                            iconName = 'youtube';
+                            break;
+                        case 'Mais':
+                            iconName = 'list';
+                            break;
+                        default:
+                            iconName = 'circle';
+                            break;
+                    }
+
+                    return <Icon name={iconName} size={size} color={color} />;
+
+                },
+            })}
             tabBarOptions={{
                 activeTintColor: '#0D0D0D',
                 inactiveTintColor: '#898C8F',
