@@ -11,9 +11,14 @@ import ButtonNew from './components/ButtonNew';
 
 import { Feather } from '@expo/vector-icons';
 
+import { createStackNavigator } from '@react-navigation/stack';
+import { TouchableOpacity } from 'react-native';
+
 const Tab = createBottomTabNavigator();
 
-export default function Routes() {
+const Stack = createStackNavigator();
+
+function Routes() {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
@@ -41,7 +46,7 @@ export default function Routes() {
                             break;
                     }
 
-                    return <Icon name={iconName} size={size} color={color} />;
+                    return <Feather name={iconName} size={size} color={color} />;
 
                 },
             })}
@@ -52,7 +57,7 @@ export default function Routes() {
                 showLabel: true,
             }} initialRouteName="Home"
         >
-            <Tab.Screen name="Home" component={Home}
+            <Tab.Screen name="home" component={Home}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="home" color={color} size={size} />
@@ -91,3 +96,5 @@ export default function Routes() {
         </Tab.Navigator>
     )
 }
+
+export default Routes;

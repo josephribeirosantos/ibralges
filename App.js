@@ -5,6 +5,11 @@ import Routes from './src/routes';
 import { StyleSheet, Text, View, Animated, Image } from 'react-native';
 import MaskedView from '@react-native-community/masked-view';
 
+import 'react-native-gesture-handler';
+import { StatusBar } from 'expo-status-bar';
+import { AppLoading } from 'expo';
+import { useFonts, Montserrat_400Regular, Montserrat_500Medium, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+
 export default class App extends React.Component {
   state = {
     loadingProgress: new Animated.Value(0),
@@ -60,7 +65,7 @@ export default class App extends React.Component {
             maskElement={
               <View style={styles.centered}>
                 <Animated.Image
-                  source={require('./assets/images/logo-icon.png')}
+                  source={require('./assets/images/logo.png')}
                   style={[{ width: 1000 }, imageScale]}
                   resizeMode="contain"
                 />
@@ -69,6 +74,9 @@ export default class App extends React.Component {
           >
             {whiteLayer}
 
+            <>
+              <StatusBar style="light" backgroundColor="#000" translucent={false} />
+            </>
             <Routes />
           </MaskedView >
         </View >
