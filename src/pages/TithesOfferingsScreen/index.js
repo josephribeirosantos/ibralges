@@ -1,12 +1,12 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
-const image = { uri: 'https://github.com/josephribeirosantos/josephribeirosantos.github.io/blob/main/Oferta-Dizimo.jpg?raw=true' };
+const image = '../../../assets/images/Oferta-Dizimo-original.jpg';
 
 export default function TithesOfferingsScreen() {
     return (
         <View style={styles.container}>
-            <ImageBackground source={image} style={styles.image}></ImageBackground>
+            <Image source={require(image)} style={styles.image}></Image>
         </View>
     );
 }
@@ -23,11 +23,13 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        resizeMode: 'cover',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 2,
-        borderWidth: 2,
+        width: '100%',
+        height: '100%',
+        /*    resizeMode: 'cover', */
+        /*     justifyContent: 'center',
+            alignItems: 'center', */
+        /*        borderRadius: 2,
+               borderWidth: 2, */
         /*   borderColor: 'coral', */
         backgroundColor: 'transparent',
         /*     width: 300,

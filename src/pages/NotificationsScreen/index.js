@@ -15,7 +15,7 @@ export default function NotificationsScreen() {
                     <Video
                         ref={video}
                         style={styles.video}
-                        source={{ uri: 'https://user-images.githubusercontent.com/50014912/119280181-0e538380-bc28-11eb-8807-41a23169dc77.mp4' }}
+                        source={{ uri: 'https://youtu.be/cYz4bVvfPVk' }}
                         useNativeControls
                         resizeMode="contain"
                         isLooping
