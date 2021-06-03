@@ -9,7 +9,6 @@ export default function New(props) {
       <Image
         source={props.cover}
         style={styles.cover}
-        
       />
 
       <View style={styles.content}>
@@ -54,11 +53,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   cover: {
-    width: 170,
-    height: 110,
-    borderRadius: 10,
-  },
-  coverplus: {
     width: 170,
     height: 110,
     borderRadius: 10,

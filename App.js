@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Routes from './src/routes';
 
@@ -7,10 +7,14 @@ import MaskedView from '@react-native-community/masked-view';
 
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { AppLoading } from 'expo';
-import { useFonts, Montserrat_400Regular, Montserrat_500Medium, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+import AppLoading from 'expo';
+import { Montserrat_400Regular, Montserrat_500Medium, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+import { useFonts } from 'expo-font';
+
+import Header from './src/components/Header'
 
 export default class App extends React.Component {
+
   state = {
     loadingProgress: new Animated.Value(0),
     AnimationDone: false
@@ -28,6 +32,7 @@ export default class App extends React.Component {
   }
 
   render() {
+
     const colorLayer = this.state.AnimationDone ? null : (
       <View style={[StyleSheet.absoluteFill, { backgroundColor: "#060606" }]} />
     );
@@ -77,7 +82,10 @@ export default class App extends React.Component {
             <>
               <StatusBar style="light" backgroundColor="#000" translucent={false} />
             </>
+
+            <Header />
             <Routes />
+
           </MaskedView >
         </View >
       </NavigationContainer>
