@@ -14,26 +14,11 @@ export default function New(props) {
       <View style={styles.content}>
         <Text style={styles.title}>{props.name}</Text>
 
-        <View style={styles.dot}>
-        </View>
-
-        <Text style={styles.badge}>Novo</Text>
-
       </View>
 
       <Text style={styles.description}>
         {props.description}
       </Text>
-
-      <View style={styles.footer}>
-        <View style={{ width: '80%' }}>
-          <Text style={styles.price}>€ 24,90</Text>
-        </View>
-        <View style={{ width: '20%' }}>
-          <Ionicons name="ios-add-circle" size={24} color="black" />
-        </View>
-      </View>
-
 
     </TouchableOpacity>
   );
