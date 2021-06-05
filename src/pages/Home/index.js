@@ -5,7 +5,6 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 import Book from '../../components/Book';
-import House from '../../components/House';
 import New from '../../components/New';
 import Recommended from '../../components/Recommended';
 
@@ -20,6 +19,40 @@ export default function Home() {
       style={{ backgroundColor: '#FFF' }}
     >
 
+      <View style={styles.container}>
+        <View style={styles.sliderContainer}>
+          <Swiper
+            autoplay
+            horizontal={false}
+            height={200}
+            activeDotColor="#FF6347"
+            onPress={() => navigation.navigate('Mais')}
+          >
+            <View style={styles.slide}>
+              <Image
+                source={require('../../../assets/images/Foto5.jpg')}
+                resizeMode="cover"
+                style={styles.sliderImage}
+              />
+            </View>
+            <View style={styles.slide}>
+              <Image
+                source={require('../../../assets/images/Foto3.jpg')}
+                resizeMode="cover"
+                style={styles.sliderImage}
+              />
+            </View>
+            <View style={styles.slide}>
+              <Image
+                source={require('../../../assets/images/Foto8.jpg')}
+                resizeMode="cover"
+                style={styles.sliderImage}
+              />
+            </View>
+          </Swiper>
+        </View>
+      </View>
+
       <View style={styles.contentNew}>
         <Text style={[styles.title, { marginTop: 36 }]}>Ministério Atrium F2</Text>
       </View>
@@ -27,22 +60,22 @@ export default function Home() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15, }}>
         <New
           cover={require('../../../assets/images/Foto1.jpg')}
-          name="Casa de Praia"
-          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          name="Louvor"
+          description="Ministério Atrium F2 - Filipenses Capitulo 2."
           onPress={() => navigation.navigate('Mais')}
         />
 
         <New
           cover={require('../../../assets/images/Foto2.jpg')}
-          name="Casa Floripa"
-          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          name="Adoração"
+          description="Ministério Atrium F2 - Filipenses Capitulo 2."
           onPress={() => { }}
         />
 
         <New
           cover={require('../../../assets/images/Foto3.jpg')}
-          name="Rancho SP"
-          description="Casa nova uma quadra do mar, lugar seguro e monitorado 24horas."
+          name="Worship"
+          description="Ministério Atrium F2 - Filipenses Capitulo 2."
           onPress={() => { }}
         />
 
@@ -54,7 +87,7 @@ export default function Home() {
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15 }}>
         <Recommended
-          cover={require('../../../assets/images/Foto5.jpg')}
+          cover={require('../../../assets/images/Foto8.jpg')}
         />
         <Recommended
           cover={require('../../../assets/images/Foto2.jpg')}
@@ -74,35 +107,11 @@ export default function Home() {
         onPress={() => navigation.navigate('Mais')}
       />
 
-    <Text style={[styles.titleBook, { marginBottom: 62 }]}>
+      {/* Esse Text é só pra dar um espaço entre um post e outro */}
+      <Text style={[styles.titleBook, { marginBottom: 62 }]}>
       </Text>
 
-      <View style={styles.container}>
-        <View style={styles.sliderContainer}>
-          <Swiper
-            autoplay
-            horizontal={false}
-            height={200}
-            activeDotColor="#FF6347"
-            onPress={() => navigation.navigate('Mais')}
-            >
-            <View style={styles.slide}>
-              <Image
-                source={require('../../../assets/images/Foto2.jpg')}
-                resizeMode="cover"
-                style={styles.sliderImage}
-              />
-            </View>
-            <View style={styles.slide}>
-              <Image
-                source={require('../../../assets/images/Foto3.jpg')}
-                resizeMode="cover"
-                style={styles.sliderImage}
-              />
-            </View>
-          </Swiper>
-        </View>
-      </View>
+
 
     </ScrollView>
   );

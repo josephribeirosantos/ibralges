@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function Book(props) {
     return (
-        <TouchableOpacity onPress={props.onPress} style={styles.container}>
+        <TouchableOpacity onPress={props.onPress} style={styles.container} >
             <Image
                 source={props.coverBook}
                 style={styles.coverBook}
@@ -14,7 +14,7 @@ export default function Book(props) {
             <View style={styles.content}>
                 <Text style={styles.title}>{props.name}</Text>
 
-                <View style={styles.dot}>
+                <View style={styles.dot} >
                 </View>
 
                 <Text style={styles.badge}>Novo</Text>
@@ -25,11 +25,11 @@ export default function Book(props) {
                 {props.description}
             </Text>
 
-            <View style={styles.footer}>
+            <View style={styles.footer} >
                 <View style={{ width: '80%' }}>
                     <Text style={styles.price}>€ 15,90</Text>
                 </View>
-                <View style={{ width: '20%' }}>
+                <View style={{ width: '20%' }} >
                     <Ionicons name="ios-add-circle" size={24} color="black" />
                 </View>
             </View>
